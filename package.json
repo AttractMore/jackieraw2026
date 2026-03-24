@@ -1,0 +1,20 @@
+{
+  "name": "jackieraw2026",
+  "version": "1.0.0",
+  "description": "Jackie Raw Health 2026",
+  "homepage": "https://github.com/AttractMore/jackieraw2026#readme",
+  "bugs": {
+    "url": "https://github.com/AttractMore/jackieraw2026/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AttractMore/jackieraw2026.git"
+  },
+  "license": "ISC",
+  "author": "AttractMore (Roger Knight)",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass assets/scss:assets/css --no-source-map --style=compressed && hugo server --minify --disableFastRender --noHTTPCache --cleanDestinationDir"
+  }
+}

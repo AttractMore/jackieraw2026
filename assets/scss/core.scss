@@ -1,0 +1,86 @@
+@use "utilities";
+@use "blocks/nav-burger";
+@use "blocks/main-menu";
+@use "blocks/site-head";
+@use "blocks/site-foot";
+@use "blocks/carbon-badge";
+@use "blocks/page-nav";
+
+body,
+html {
+  /* this is to stop the page scrolling when the menu is open */
+  overflow-x: hidden;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  font-family: var(--sans-serif);
+  font-weight: 400;
+  font-size: clamp(1.125rem, 1.07rem + 0.275vw, 1.5rem);
+  line-height: var(--line-height);
+  color: var(--textColour);
+  background-color: var(--off-white);
+  min-width: 320px;
+  position: relative;
+  margin: 0;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.main {
+  padding-top: 4em;
+}
+// @media screen and (min-width: 52em) {
+//   .main {
+//     padding-top: 7em;
+//   }
+// }
+.wrap {
+  width: var(--max-content-percentage);
+  margin: 0 auto;
+  max-width: var(--max-content-width);
+}
+/**
+  Paragraphs etc
+*/
+p,
+li,
+input,
+textarea {
+  font-size: clamp(1.125rem, 1.008rem + 0.586vw, 1.313rem);
+  line-height: 1.3;
+  &.lead {
+    font-size: clamp(1.438rem, 1.086rem + 1.758vw, 2rem);
+  }
+  &.sub {
+    font-size: clamp(1.313rem, 1.117rem + 0.977vw, 1.625rem);
+  }
+}
+@media screen and (min-width: 52em) {
+  p,
+  li,
+  input,
+  textarea {
+    font-size: clamp(1.125rem, 1.07rem + 0.275vw, 1.5rem);
+    &.lead {
+      font-size: clamp(1.5rem, 1.353rem + 0.734vw, 2.5rem);
+      text-wrap: balance;
+    }
+    &.sub {
+      font-size: clamp(1.313rem, 1.212rem + 0.505vw, 2rem);
+    }
+  }
+}
+p {
+  margin: 0 0 1.5em 0;
+}
+strong {
+  font-family: var(--sans-serif-medium);
+}
+hr {
+  background-color: var(--blue);
+  height: 4px;
+  margin: 0;
+}

@@ -2,14 +2,12 @@
 <header role="banner" class="site-head">
   <div class="wrap">
     <div class="site-head__inner">
-
       <a href="/" aria-label="T&B Design - home" class="site-head__brand">
-        {{ partial "tandb-logo.html" . }}
-        <span class="visually-hidden">T&B Design</span>
+        {{/* partial "tandb-logo.html" . */}}
+        <span class="visually-hidden">Jackie Raw Health</span>
       </a>
 
       <div class="site-head__navigational">
-
         <button class="nav-burger" type="button" aria-expanded="false" aria-label="Menu" aria-controls="menu">
           <i></i>
           <span class="visually-hidden">menu</span>
@@ -17,17 +15,11 @@
 
         <nav class="nav site-head__nav" aria-expanded="false" aria-label="Main navigation">
           <ul id="menu" class="nav__list" role="list">
-
-            {{ $currentPage := . }}
-            {{ $currentPageTitle := lower .Title }}
-            {{ range .Site.Menus.main }}
-              <li>
-                <a title="{{ .Name }}" {{- if eq $currentPageTitle (lower .Name) }} aria-current="page" data-state="active" {{- end }} href="{{ .URL }}">
-                  {{ .Name }}
-                </a>
-              </li>
+            {{ $currentPage := . }} {{ $currentPageTitle := lower .Title }} {{ range .Site.Menus.main }}
+            <li>
+              <a title="{{ .Name }}" {{- if eq $currentPageTitle (lower .Name) }} aria-current="page" data-state="active" {{- end }} href="{{ .URL }}"> {{ .Name }} </a>
+            </li>
             {{ end }}
-            
           </ul>
         </nav>
       </div>
