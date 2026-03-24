@@ -1,0 +1,13 @@
+.centre {
+  text-align: center;
+}
+.vertically-centre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

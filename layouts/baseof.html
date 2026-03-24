@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  {{- partial "head.html" . }}
+</head>
+{{- $s:= lower .Title -}}
+<body id="top" class="{{ replace $s " " "-" }}">
+  {{- partial "header.html" . }}
+  <main class="main">
+    {{- block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . -}}
+  {{- $scripts := resources.Get "js/scripts.js" | resources.Minify -}}
+  <script type="module" defer src="{{ $scripts.RelPermalink }}"></script>
+  {{ if .Params.extraJS }}
+    {{- $extraJS := resources.Get .Params.extraJS | resources.Minify -}}
+    <script src="{{ $extraJS.RelPermalink }}" defer></script>
+  {{- end -}}
+
+  {{- if eq .Title "Contact" -}}
+    {{- $mailcheck := resources.Get "js/mailcheck.js" | resources.Minify -}}
+    {{- $runMailcheck := resources.Get "js/runMailcheck.js" | resources.Minify -}}
+    <script src="{{ $mailcheck.RelPermalink }}"></script>
+    <script defer src="{{ $runMailcheck.RelPermalink }}"></script>
+  {{- end -}}
+
+  {{ partial "service-worker.html" . }}
+  <div class="site-overlay"></div>
+</body>
+
+</html>

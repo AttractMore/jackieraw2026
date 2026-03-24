@@ -1,0 +1,29 @@
+{{- if hugo.IsProduction | and (ne .Params.pageRobots false) }}
+<meta name="robots" content="index,follow">
+{{- else }}
+<meta name="robots" content="noindex,follow">
+{{- end }} 
+<link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+
+{{- if .Params.socialImage -}}
+<meta property="og:image" content="{{ .Params.socialImage }}">
+{{- else }}
+<meta property="og:image" content="/images/tandb-logo.svg">
+{{- end }}
+
+{{ if .Params.primaryImageAlt }}
+<meta property="og:image:alt" content="{{ .Params.primaryImageAlt }}">
+{{- else -}}
+<meta property="og:image:alt" content="Page image for {{ .Title}}">
+{{- end }}
+
+{{- if .Description -}}
+<meta name="description" content="{{ .Description }}">
+<meta property="og:description" content="{{ .Description }}">
+{{ end }}
+
+<meta name="theme-color" content="#ffffff">

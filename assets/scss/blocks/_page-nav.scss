@@ -1,0 +1,41 @@
+.page-nav-inner {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1em;
+  svg {
+    stroke: var(--almost-black);
+    stroke-width: 8px;
+    fill: none;
+    width: 50px;
+    margin-bottom: 0.5em;
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+    a {
+      width: min-content;
+    }
+    &.with-arrow.left {
+      justify-self: left;
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    &.with-arrow.right {
+      justify-self: right;
+      svg {
+        align-self: flex-end;
+      }
+    }
+  }
+}
+@media screen and (min-width: 28.75em) {
+  .page-nav-inner {
+    p {
+      a {
+        width: auto;
+      }
+    }
+    // display: flex;
+  }
+}

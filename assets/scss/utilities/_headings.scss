@@ -1,0 +1,62 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  font-family: var(--sans-serif-bold);
+  color: var(--almost-black);
+  margin: 0;
+  text-wrap: balance;
+}
+h1,
+.h1 {
+  font-size: clamp(2.5rem, 2.188rem + 1.563vw, 3rem);
+  line-height: 1;
+  margin-bottom: 1em;
+}
+.home-intro h1 {
+  font-size: clamp(2.625rem, 1.92rem + 3.523vw, 3.75rem);
+}
+h2,
+.h2 {
+  font-size: clamp(2rem, 1.688rem + 1.563vw, 2.5rem);
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h3,
+.h3 {
+  font-size: clamp(1.75rem, 1.567rem + 0.917vw, 3rem);
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 52em) {
+  h1,
+  .h1 {
+    font-size: var(--h1-font-size-large);
+  }
+  .home-intro h1 {
+    font-size: clamp(3.25rem, 1.878rem + 2.638vw, 6rem);
+  }
+  h2,
+  .h2 {
+    font-size: var(--h2-font-size-large);
+  }
+  h3,
+  .h3 {
+    font-size: var(--h3-font-size-large);
+  }
+}
+h4,
+.h4 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+h5,
+.h5 {
+  font-size: 0.846em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

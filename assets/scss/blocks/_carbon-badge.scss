@@ -1,0 +1,25 @@
+#wcb {
+  &.carbonbadge {
+    --b1: var(--off-white) !important;
+    --b2: var(--blue) !important;
+    text-align: left !important;
+    font-size: 0.7em !important;
+  }
+  #wcb_a {
+    font-weight: 400 !important;
+  }
+  #wcb_g {
+    color: var(--textColour);
+    margin: 0;
+  }
+  &.wcb-d #wcb_2 {
+    color: var(--textColour) !important;
+  }
+}
+@media screen and (min-width: 52em) {
+  #wcb {
+    &.carbonbadge {
+      text-align: right !important;
+    }
+  }
+}

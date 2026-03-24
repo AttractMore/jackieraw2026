@@ -1,0 +1,126 @@
+.navOpen {
+  .site-overlay {
+    display: block;
+  }
+  .site-head__inner {
+    align-items: flex-start;
+  }
+}
+
+.site-head__nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  // width: var(--menu-width);
+  width: 100%;
+  // overscroll-behavior: contain;
+  // overflow: hidden;
+  -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+  z-index: 20;
+  &[aria-expanded="false"] {
+    transform: translateX(100%);
+    a {
+      display: none;
+    }
+  }
+  &[aria-expanded="true"] {
+    a {
+      display: flex;
+    }
+  }
+
+  > ul {
+    margin: 4.4em 0;
+    li {
+      margin: 0;
+      padding: 0;
+      background-color: var(--off-white);
+      border-bottom: 1px solid var(--blue);
+      &:first-child {
+        border-top: 1px solid var(--blue);
+      }
+    }
+  }
+  a,
+  a:link,
+  a:visited {
+    color: var(--almost-black);
+    padding: 1em;
+    text-decoration: none;
+    font-family: var(--sans-serif-medium);
+    font-size: 1.25rem;
+    transition:
+      color,
+      background-color,
+      var(--transition-time) var(--transition-style);
+    &:hover,
+    &:active,
+    &[data-state="active"] {
+      color: var(--off-white);
+      text-decoration: none;
+      background-color: var(--pink);
+    }
+  }
+}
+
+@media screen and (min-width: 68.75em) {
+  .nav-burger,
+  .site-overlay {
+    display: none;
+  }
+  .site-head__nav {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    height: auto;
+    transition: none;
+    transform: none;
+    overflow: visible;
+    &[aria-expanded="false"] {
+      transform: none;
+      a {
+        display: inline-block;
+      }
+    }
+
+    > ul {
+      display: flex;
+      // grid-template-columns: repeat(3, 1fr);
+      gap: 0 1em;
+      background-color: transparent;
+      max-width: 50rem;
+      margin: 0;
+      transition: none;
+      li {
+        padding: 0;
+        width: 10ch;
+        line-height: 1;
+        border-bottom: 0;
+        &:first-child {
+          display: none; // Home not needed on wider screens
+        }
+        &:not(:nth-child(2)) {
+          border-left: 2px solid var(--pink);
+        }
+      }
+    }
+    a,
+    a:link,
+    a:visited {
+      display: inline-block;
+      position: relative;
+      transition: all var(--transition-time) var(--transition-style) ease-out;
+      padding: 0 0.5em;
+      margin: 0;
+      color: var(--textColour);
+      &:hover,
+      &:active,
+      &[data-state="active"] {
+        color: var(--pink);
+        background-color: transparent;
+        text-decoration: none;
+      }
+    }
+  }
+}

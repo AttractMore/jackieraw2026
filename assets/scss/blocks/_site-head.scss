@@ -1,0 +1,22 @@
+.site-head {
+  background-color: var(--off-white);
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.5);
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+  }
+  &__brand {
+    flex: 0 0 60px;
+    display: flex;
+    align-items: center;
+    svg {
+      height: 3rem;
+    }
+  }
+}

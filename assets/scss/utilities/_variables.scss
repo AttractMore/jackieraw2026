@@ -1,0 +1,33 @@
+:root {
+  /*********************
+COLOURS
+*********************/
+  --textColour: #24373f;
+  --blue: #0076a3;
+  --pink: #c3006b;
+  --off-white: #f7f7f7;
+  --almost-black: #0d0d0d;
+
+  /***************************************
+    OTHERS
+***************************************/
+  --max-content-width: 2500px;
+  --max-content-percentage: 90%;
+  --image-radius: 1em;
+  --button-radius: 0.5em;
+  --column-gap: 2em;
+  --row-gap: 2em;
+  --menu-width: 16em;
+  --line-height: 1.5em;
+  --transition-time: 0.2s;
+  --transition-style: ease-in-out;
+
+  --vertical-block-spacing: 5rem;
+
+  --sans-serif: "Atkinson Hyperlegible Next 400", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --sans-serif-medium: "Atkinson Hyperlegible Next 500", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --sans-serif-bold: "Atkinson Hyperlegible Next 800", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --h1-font-size-large: clamp(2.5rem, 1.752rem + 1.439vw, 4rem);
+  --h2-font-size-large: clamp(2.125rem, 1.439rem + 1.319vw, 3.5rem);
+  --h3-font-size-large: clamp(1.75rem, 1.126rem + 1.199vw, 3rem);
+}

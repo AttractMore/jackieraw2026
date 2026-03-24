@@ -1,0 +1,122 @@
+footer {
+  margin-top: 2em;
+  .final-footer {
+    padding: 3em 0 1.5em;
+  }
+  .final-footer {
+    box-shadow: 0 -6px 11px 0 rgba(0, 0, 0, 0.5);
+    .tandb-logo-footer,
+    .linkedin-icon {
+      display: inline-flex;
+      svg {
+        height: 3rem;
+      }
+    }
+    .tandb-logo-footer {
+      margin-right: 4em;
+      a {
+        display: inline-block;
+      }
+    }
+    .linkedin-icon a {
+      display: inline-block;
+      svg {
+        fill: var(--almost-black);
+        transition: fill var(--transition-time) var(--transition-style);
+      }
+      &:hover,
+      &:active {
+        svg {
+          fill: var(--blue);
+        }
+      }
+    }
+    .company-legal {
+      margin: 1em 0 2em;
+      p {
+        margin-bottom: 1em;
+      }
+    }
+    .footer-links {
+      margin-bottom: 2em;
+      li {
+        margin-bottom: 0.25em;
+      }
+    }
+    .ecosend {
+      a {
+        img {
+          max-width: 150px;
+          margin-bottom: 1em;
+        }
+      }
+    }
+    .attractmore {
+      margin-bottom: 0;
+      margin-left: 0.25em;
+      font-size: 0.75em;
+      line-height: 1.15;
+    }
+    .footer-links,
+    .attractmore {
+      a,
+      a:link,
+      a:visited {
+        font-family: var(--sans-serif-medium);
+        color: var(--textColour);
+      }
+      a:hover,
+      a:active {
+        color: var(--pink);
+      }
+    }
+  }
+}
+@media screen and (min-width: 52em) {
+  footer {
+    .final-footer {
+      > div {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        // gap: 0 clamp(0.5rem, -0.248rem + 1.439vw, 2rem);
+        grid-template-rows: 3rem 1fr;
+        row-gap: var(--row-gap);
+      }
+      .tandb-logo-footer,
+      .linkedin-icon {
+        display: block;
+      }
+      .tandb-logo-footer {
+        // grid-column: 1 / span 2;
+        margin-right: 0;
+        align-self: start;
+      }
+      // .linkedin-icon {
+      // grid-column: 3 / span 2;
+      // }
+      .company-legal {
+        // grid-row: 2;
+        // grid-column: 1 / span 4;
+        margin: 0;
+      }
+      // .footer-links {
+      //   grid-row: 1 / span 2;
+      //   grid-column: 5 / span 4;
+      // }
+      .wcb {
+        .ecosend {
+          a {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+        // grid-row: 1 / span 2;
+        // grid-column: 8 / span 5;
+        justify-self: right;
+        .attractmore {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

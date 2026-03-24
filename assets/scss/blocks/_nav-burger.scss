@@ -1,0 +1,78 @@
+/* See https://web.dev/articles/website-navigation */
+.nav-burger {
+  position: relative;
+  border: none;
+  text-decoration: none;
+  padding: 0.5em 0.5rem;
+  color: var(--pink);
+  width: 38px;
+  height: 38px;
+  display: block;
+  background: transparent;
+  // transition: all var(--transition-time) var(--transition-style);
+  cursor: pointer;
+  z-index: 30;
+  &:focus {
+    // fallback style for browsers that don't support :focus-visible
+    outline: 3px solid var(--pink);
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    // Remove the focus indicator on mouse focus for browsers that do support :focus-visible
+    outline: none;
+  }
+
+  &:focus:focus-visible {
+    // draw a noticeable focus style for keyboard focus on browsers that support :focus-visible
+    outline: 3px solid var(--pink);
+    outline-offset: 2px;
+  }
+  i {
+    display: block;
+    &:before,
+    &:after {
+      content: "";
+    }
+    &:before {
+      margin-top: -8px;
+    }
+    &:after {
+      margin-top: 8px;
+    }
+  }
+  i,
+  i:before,
+  i:after {
+    height: 3px;
+    width: 24px;
+    background: var(--pink);
+    transition: all var(--transition-time) var(--transition-style);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &[aria-expanded="true"] {
+    margin-top: 6px;
+    i {
+      background: transparent;
+      &:before,
+      &:after {
+        left: -2px;
+        width: 28px;
+        // background: var(--almost-black);
+      }
+      &:before {
+        transform: rotate(45deg);
+        top: 6px;
+        margin-top: -6px;
+      }
+      &:after {
+        transform: rotate(-45deg);
+        top: -10px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+baseURL = "http://localhost:1313"
+languageCode = "en-gb"
+title = "Jackie Raw Health"
+pagination.pagerSize = 5
+copyright = "©2026 Jackie Raw Health"
+ignoreLogs = ["warning-goldmark-raw-html"]
+disableKinds = ['taxonomy']
+[params]
+  [params.author]
+    email = "roger@attractmore.co.uk"
+    name = 'Roger Knight'
+  [markup]
+    [markup.goldmark]
+      [markup.goldmark.renderer]
+        unsafe = true
+
