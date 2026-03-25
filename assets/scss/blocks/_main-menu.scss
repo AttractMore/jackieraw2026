@@ -30,25 +30,25 @@
   }
 
   > ul {
-    margin: 4.4em 0;
+    margin: 4.3em 0;
     li {
       margin: 0;
       padding: 0;
-      background-color: var(--off-white);
-      border-bottom: 1px solid var(--blue);
+      background-color: var(--terracotta);
+      border-bottom: 1px solid var(--off-white);
       &:first-child {
-        border-top: 1px solid var(--blue);
+        border-top: 1px solid var(--off-white);
       }
     }
   }
   a,
   a:link,
   a:visited {
-    color: var(--almost-black);
+    color: var(--off-white);
     padding: 1em;
     text-decoration: none;
-    font-family: var(--sans-serif-medium);
-    font-size: 1.25rem;
+    font-family: var(--sans-serif-light);
+    font-size: clamp(1.125rem, 1.07rem + 0.275vw, 1.5rem);
     transition:
       color,
       background-color,
@@ -58,7 +58,7 @@
     &[data-state="active"] {
       color: var(--off-white);
       text-decoration: none;
-      background-color: var(--pink);
+      background-color: var(--dark-blue);
     }
   }
 }
@@ -94,32 +94,28 @@
       transition: none;
       li {
         padding: 0;
-        width: 10ch;
         line-height: 1;
         border-bottom: 0;
         &:first-child {
-          display: none; // Home not needed on wider screens
-        }
-        &:not(:nth-child(2)) {
-          border-left: 2px solid var(--pink);
+          border: none;
         }
       }
-    }
-    a,
-    a:link,
-    a:visited {
-      display: inline-block;
-      position: relative;
-      transition: all var(--transition-time) var(--transition-style) ease-out;
-      padding: 0 0.5em;
-      margin: 0;
-      color: var(--textColour);
-      &:hover,
-      &:active,
-      &[data-state="active"] {
-        color: var(--pink);
-        background-color: transparent;
-        text-decoration: none;
+      a,
+      a:link,
+      a:visited {
+        display: inline-block;
+        position: relative;
+        transition: color var(--transition-time) var(--transition-style);
+        padding: 0 0.5em;
+        margin: 0;
+        color: var(--off-white);
+        &:hover,
+        &:active,
+        &[data-state="active"] {
+          color: var(--dark-blue);
+          background-color: transparent;
+          text-decoration: none;
+        }
       }
     }
   }

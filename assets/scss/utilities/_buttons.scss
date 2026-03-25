@@ -11,10 +11,11 @@
   a,
   button {
     border-radius: var(--button-radius);
-    background-color: var(--pink);
-    border: 1px solid var(--pink);
+    corner-shape: squircle;
+    background-color: var(--terracotta);
+    border: 1px solid var(--terracotta);
     color: var(--off-white);
-    font-family: var(--sans-serif-bold);
+    font-family: var(--sans-serif-light);
     padding: 0.6em 0.5em;
     line-height: 1;
     text-align: center;
@@ -22,32 +23,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all var(--transition-time) var(--transition-style);
+    transition: color var(--transition-time) var(--transition-style);
     &:hover,
     &:focus {
-      background-color: var(--off-white);
-      color: var(--almost-black);
-      border-color: var(--almost-black);
+      color: var(--dark-blue);
     }
-    // &.arrowed {
-    //   svg {
-    //     stroke-width: 0.5em;
-    //     width: 1.75em;
-    //     stroke: var(--off-white);
-    //     transition: stroke var(--transition-time) var(--transition-style);
-    //     padding-left: 0.5em;
-    //   }
-    //   &:hover,
-    //   &:focus {
-    //     svg {
-    //       stroke: var(--almost-black);
-    //     }
-    //   }
-    //   &.left {
-    //     svg {
-    //       transform: rotate(180deg);
-    //     }
-    //   }
-    // }
   }
 }

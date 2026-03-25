@@ -6,24 +6,32 @@ COLOURS
   --blue: #0076a3;
   --pink: #c3006b;
   --off-white: #f7f7f7;
-  --almost-black: #0d0d0d;
+  /* https://thebrandalchemists.com/blogs/news/holistic-brand-color-palettes-2025?srsltid=AfmBOorGj-h29VwkaC8zPcOms3bKH-p8LxJ1ftk-hlaTx0hc78VMtkkD Sandy Shores */
+  --beige: #efe6d6;
+  --mid-grey: #b8b8ac;
+  --light-terracotta: #cba378;
+  --terracotta: #c86d39;
+  --orange: rgb(229, 89, 55);
+  --dark-blue: #2e4c63;
+  --almost-black: #2c2927;
 
   /***************************************
     OTHERS
 ***************************************/
-  --max-content-width: 2500px;
+  --max-content-width: 1200px;
   --max-content-percentage: 90%;
   --image-radius: 1em;
-  --button-radius: 0.5em;
+  --button-radius: 1.5em;
   --column-gap: 2em;
   --row-gap: 2em;
   --menu-width: 16em;
-  --line-height: 1.5em;
+  --line-height: 1.6;
   --transition-time: 0.2s;
   --transition-style: ease-in-out;
 
   --vertical-block-spacing: 5rem;
 
+  --sans-serif-light: "Poppins 300", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --sans-serif-medium: "Poppins 500", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --sans-serif-bold: "Poppins 600", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;

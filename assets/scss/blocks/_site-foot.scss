@@ -1,12 +1,11 @@
 footer {
+  background-color: var(--orange);
   margin-top: 2em;
   .final-footer {
     padding: 3em 0 1.5em;
   }
   .final-footer {
-    box-shadow: 0 -6px 11px 0 rgba(0, 0, 0, 0.5);
-    .tandb-logo-footer,
-    .linkedin-icon {
+    .tandb-logo-footer {
       display: inline-flex;
       svg {
         height: 3rem;
@@ -18,23 +17,11 @@ footer {
         display: inline-block;
       }
     }
-    .linkedin-icon a {
-      display: inline-block;
-      svg {
-        fill: var(--almost-black);
-        transition: fill var(--transition-time) var(--transition-style);
-      }
-      &:hover,
-      &:active {
-        svg {
-          fill: var(--blue);
-        }
-      }
-    }
     .company-legal {
       margin: 1em 0 2em;
       p {
         margin-bottom: 1em;
+        color: var(--off-white);
       }
     }
     .footer-links {
@@ -43,31 +30,24 @@ footer {
         margin-bottom: 0.25em;
       }
     }
-    .ecosend {
-      a {
-        img {
-          max-width: 150px;
-          margin-bottom: 1em;
-        }
-      }
-    }
     .attractmore {
       margin-bottom: 0;
       margin-left: 0.25em;
       font-size: 0.75em;
       line-height: 1.15;
+      color: var(--off-white);
     }
     .footer-links,
     .attractmore {
       a,
       a:link,
       a:visited {
-        font-family: var(--sans-serif-medium);
-        color: var(--textColour);
+        font-family: var(--sans-serif-light);
+        color: var(--off-white);
       }
       a:hover,
       a:active {
-        color: var(--pink);
+        color: var(--dark-blue);
       }
     }
   }
@@ -104,14 +84,6 @@ footer {
       //   grid-column: 5 / span 4;
       // }
       .wcb {
-        .ecosend {
-          a {
-            display: flex;
-            justify-content: flex-end;
-          }
-        }
-        // grid-row: 1 / span 2;
-        // grid-column: 8 / span 5;
         justify-self: right;
         .attractmore {
           text-align: right;

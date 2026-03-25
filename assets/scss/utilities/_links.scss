@@ -3,32 +3,32 @@ LINK STYLES
 *********************/
 a,
 a:visited {
-  color: var(--pink);
+  color: var(--terracotta);
   text-decoration: none;
   transition: color var(--transition-time) var(--transition-style);
 
   &:hover,
   &:focus {
-    color: var(--blue);
+    color: var(--dark-blue);
   }
 }
 
 a {
   &:focus {
     // fallback style for browsers that don't support :focus-visible
-    outline: 3px solid var(--pink);
+    outline: 3px solid var(--terracotta);
     outline-offset: 2px;
   }
 
   &:focus:not(:focus-visible) {
     // fallback style for browsers that don't support :focus-visible
-    // outline: 3px solid var(--pink);
+    // outline: 3px solid var(--terracotta);
     // outline-offset: 2px;
   }
 
   &:focus:focus-visible {
     // draw a noticeable focus style for keyboard focus on browsers that support :focus-visible
-    outline: 3px solid var(--pink);
+    outline: 3px solid var(--terracotta);
     outline-offset: 2px;
   }
 
