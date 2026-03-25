@@ -4,7 +4,7 @@ title: "Home"
 
 ![Jackie Raw](/images/jackie-raw.jpg)
 
-## Introduction
+# Introduction
 
 I don't want to drain the [whole swamp](/), i just want to shoot some alligators get all your ducks in a row, or turn the ship, and put a record on and see who dances, but pig in a python disband the squad but rehydrate as needed. This is our north star design.
 

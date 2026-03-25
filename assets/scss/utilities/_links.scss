@@ -3,7 +3,7 @@ LINK STYLES
 *********************/
 a,
 a:visited {
-  color: var(--terracotta);
+  color: var(--orange);
   text-decoration: none;
   transition: color var(--transition-time) var(--transition-style);
 
@@ -16,19 +16,19 @@ a:visited {
 a {
   &:focus {
     // fallback style for browsers that don't support :focus-visible
-    outline: 3px solid var(--terracotta);
+    outline: 3px solid var(--orange);
     outline-offset: 2px;
   }
 
   &:focus:not(:focus-visible) {
     // fallback style for browsers that don't support :focus-visible
-    // outline: 3px solid var(--terracotta);
+    // outline: 3px solid var(--orange);
     // outline-offset: 2px;
   }
 
   &:focus:focus-visible {
     // draw a noticeable focus style for keyboard focus on browsers that support :focus-visible
-    outline: 3px solid var(--terracotta);
+    outline: 3px solid var(--orange);
     outline-offset: 2px;
   }
 
