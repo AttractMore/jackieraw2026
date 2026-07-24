@@ -9,9 +9,9 @@
   url = "/homeopathy/"
   weight = 10
 [[main]]
-  identifier = "about"
-  name = "About"
-  url = "/about/"
+  identifier = "biography"
+  name = "Biography"
+  url = "/biography/"
   weight = 20
 [[main]]
   identifier = "contact"

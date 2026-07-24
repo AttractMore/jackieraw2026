@@ -1,21 +1,39 @@
 <a class="skip-link button" href="#main-content">Skip to content</a>
-<header role="banner" class="site-head">
+<header role="banner" class="site-header">
   <div class="wrap">
-    <div class="site-head__inner">
-      <a href="/" aria-label="Jackie Raw Health - home" class="site-head__brand">
-        <svg aria-hidden="true">
-          <use xlink:href="/icons/symbol-defs.svg#icon-logo"></use>
-        </svg>
-        <span>Jackie Raw<br />Health</span>
-      </a>
-
-      <div class="site-head__navigational">
-        <button class="nav-burger" type="button" aria-expanded="false" aria-label="Menu" aria-controls="menu">
-          <i></i>
-          <span class="visually-hidden">menu</span>
+    <div class="site-branding">
+      {{ partial "logo-figure.html" . }}
+      <aside>
+        <button class="menu-btn" type="button">
+          <svg aria-hidden="true"><use xlink:href="/icons/symbol-defs.svg#icon-menu"></use></svg>
+          <span class="visually-hidden">Menu</span>
         </button>
+      </aside>
+    </div>
+    <!-- .site-branding -->
 
-        <nav class="nav site-head__nav" aria-expanded="false" aria-label="Main navigation">
+    <nav id="site-navigation" class="main-navigation">
+      <ul id="menu" class="nav__list" role="list">
+        {{ $currentPage := . }} {{ $currentPageTitle := lower .Title }} {{ range .Site.Menus.main }}
+        <li>
+          <a title="{{ .Name }}" {{- if eq $currentPageTitle (lower .Name) }} aria-current="page" data-state="active" {{- end }} href="{{ .URL }}"> {{ .Name }} </a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+    <!-- .main-navigation -->
+    <dialog id="modal-menu" closedby="any">
+      <div class="dialog-content">
+        <div class="modal-menu-header">
+          <svg aria-hidden="true">
+            <use xlink:href="/icons/symbol-defs.svg#icon-logo"></use>
+          </svg>
+          <button class="close-btn" autofocus>
+            <svg aria-hidden="true" class="icon icon-close"><use xlink:href="/icons/symbol-defs.svg#icon-close"></use></svg>
+            <span class="visually-hidden">Close</span>
+          </button>
+        </div>
+        <nav class="modal-navigation">
           <ul id="menu" class="nav__list" role="list">
             {{ $currentPage := . }} {{ $currentPageTitle := lower .Title }} {{ range .Site.Menus.main }}
             <li>
@@ -25,6 +43,6 @@
           </ul>
         </nav>
       </div>
-    </div>
+    </dialog>
   </div>
 </header>

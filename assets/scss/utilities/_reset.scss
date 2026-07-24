@@ -278,12 +278,12 @@ i {
   font-style: italic;
 }
 // Prevent orphans
-p,
-li,
-figcaption,
-blockquote {
-  text-wrap: pretty;
-}
+// p,
+// li,
+// figcaption,
+// blockquote {
+//   text-wrap: pretty;
+// }
 
 blockquote {
   margin: 0;
@@ -748,7 +748,10 @@ textarea {
 :where(dialog),
 :where(dialog)::backdrop {
   opacity: 0;
-  transition: opacity 300ms ease-out, display 300ms allow-discrete, overlay 300ms allow-discrete;
+  transition:
+    opacity 300ms ease-out,
+    display 300ms allow-discrete,
+    overlay 300ms allow-discrete;
 }
 
 :where(dialog[open]),

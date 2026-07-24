@@ -5,18 +5,6 @@ footer {
     padding: 3em 0 1.5em;
   }
   .final-footer {
-    .tandb-logo-footer {
-      display: inline-flex;
-      svg {
-        height: 3rem;
-      }
-    }
-    .tandb-logo-footer {
-      margin-right: 4em;
-      a {
-        display: inline-block;
-      }
-    }
     .company-legal {
       margin: 1em 0 2em;
       p {
@@ -37,7 +25,6 @@ footer {
       line-height: 1.15;
       color: var(--off-white);
     }
-    .footer-links,
     .attractmore {
       a,
       a:link,

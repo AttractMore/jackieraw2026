@@ -1,0 +1,39 @@
+{{- define "main" }}
+<div class="contact" itemscope itemtype="https://schema.org/BlogPosting">
+  <section class="contact-form wrap">
+    <div>
+      {{ .Content }}
+      <form method="POST" action="/api/submit-contact-form" aria-label="JRH Contact form">
+        <input type="hidden" name="subject" value="JRH Contact request" />
+        <fieldset>
+          <p>
+            <label for="name">Name</label>
+            <input name="name" id="name" type="text" maxlength="25" autocomplete="name" placeholder="My name is" required />
+          </p>
+
+          <p>
+            <label for="email">Email</label>
+            <input name="email" id="email" type="email" autocomplete="email" placeholder="My email address is" maxlength="100" required />
+          </p>
+
+          <p class="honey">
+            <label for="contact-name"
+              >Contact name
+              <input id="contact-name" type="text" name="contact-name" />
+            </label>
+          </p>
+
+          <p>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+          </p>
+
+          <p class="standard-button">
+            <button type="submit">Submit the form</button>
+          </p>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+</div>
+{{- end }}{{/* end main */}}

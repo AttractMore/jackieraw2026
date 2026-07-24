@@ -13,42 +13,22 @@ h4,
 }
 h1,
 .h1 {
-  font-size: clamp(2.5rem, 2.188rem + 1.563vw, 3rem);
+  font-size: clamp(1.75rem, 1.477rem + 1.364vw, 2.5rem);
   line-height: 1;
   margin-bottom: 1em;
 }
-.home-intro h1 {
-  font-size: clamp(2.625rem, 1.92rem + 3.523vw, 3.75rem);
-}
 h2,
 .h2 {
-  font-size: clamp(2rem, 1.688rem + 1.563vw, 2.5rem);
+  font-size: clamp(1.25rem, 1.068rem + 0.909vw, 1.75rem);
   line-height: 1;
   margin-bottom: 1em;
 }
 h3,
 .h3 {
-  font-size: clamp(1.75rem, 1.567rem + 0.917vw, 3rem);
+  font-size: clamp(1.125rem, 0.989rem + 0.682vw, 1.5rem);
   margin-bottom: 1em;
 }
 
-@media screen and (min-width: 52em) {
-  h1,
-  .h1 {
-    font-size: var(--h1-font-size-large);
-  }
-  .home-intro h1 {
-    font-size: clamp(3.25rem, 1.878rem + 2.638vw, 6rem);
-  }
-  h2,
-  .h2 {
-    font-size: var(--h2-font-size-large);
-  }
-  h3,
-  .h3 {
-    font-size: var(--h3-font-size-large);
-  }
-}
 h4,
 .h4 {
   font-size: 1em;

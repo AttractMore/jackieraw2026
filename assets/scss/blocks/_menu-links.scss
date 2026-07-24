@@ -1,0 +1,25 @@
+#modal-menu,
+#site-navigation,
+.site-footer {
+  ul {
+    li {
+      a,
+      a:visited {
+        line-height: 1;
+        // text-decoration: none;
+        color: var(--white);
+        text-decoration: underline 2px rgba(255, 255, 255, 0);
+        text-underline-offset: 2px;
+        transition:
+          text-decoration-color var(--transition-time) var(--transition-ease),
+          text-underline-offset var(--transition-time) var(--transition-ease);
+      }
+      a:hover,
+      a:active,
+      a[aria-current="page"] {
+        text-decoration-color: rgba(255, 255, 255, 1);
+        text-underline-offset: 4px;
+      }
+    }
+  }
+}

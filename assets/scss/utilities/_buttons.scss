@@ -23,7 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: color var(--transition-time) var(--transition-style);
+    transition: color var(--transition-time) var(--transition-ease);
     &:hover,
     &:focus {
       color: var(--dark-blue);

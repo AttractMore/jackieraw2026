@@ -6,12 +6,14 @@
 {{- $s:= lower .Title -}}
 <body id="top" class="{{ replace $s " " "-" }}">
   {{- partial "header.html" . }}
-  <main class="main">
+  <main id="main-content" class="main">
     {{- block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . -}}
   {{- $scripts := resources.Get "js/scripts.js" | resources.Minify -}}
   <script type="module" defer src="{{ $scripts.RelPermalink }}"></script>
+  {{- $dialogScript := resources.Get "js/dialog.js" | resources.Minify -}}
+  <script type="module" defer src="{{ $dialogScript.RelPermalink }}"></script>
   {{ if .Params.extraJS }}
     {{- $extraJS := resources.Get .Params.extraJS | resources.Minify -}}
     <script src="{{ $extraJS.RelPermalink }}" defer></script>
@@ -25,7 +27,6 @@
   {{- end -}}
 
   {{/* partial "service-worker.html" . */}}
-  <div class="site-overlay"></div>
 </body>
 
 </html>

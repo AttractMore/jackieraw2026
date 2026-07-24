@@ -1,8 +1,8 @@
 @use "utilities";
-@use "blocks/nav-burger";
-@use "blocks/main-menu";
-@use "blocks/site-head";
-@use "blocks/site-foot";
+@use "blocks/site-header";
+@use "blocks/site-footer";
+@use "blocks/menu-links";
+@use "blocks/logo";
 @use "blocks/carbon-badge";
 @use "blocks/page-nav";
 

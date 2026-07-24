@@ -10,40 +10,13 @@ Utility Classes
 .mt05 {
   margin-top: 0.5em;
 }
-.rounded-corners {
-  img {
-    border-radius: var(--image-radius);
-  }
-}
 .vertical-padding-top {
   padding-top: var(--vertical-block-spacing);
 }
 .vertical-padding-bottom {
   padding-bottom: var(--vertical-block-spacing);
 }
-@media screen and (min-width: 52em) {
-  .align-with-adjacent-h2 {
-    position: relative;
-    line-height: var(--h2-font-size-large);
-    &.sub {
-      top: 0.22em;
-    }
-    &.lead {
-      top: 0.12em;
-    }
-  }
-}
-@media screen and (min-width: 52em) {
-  @supports (text-box: trim-end cap alphabetic) {
-    .align-with-adjacent-h1 {
-      text-box: trim-end cap alphabetic;
-    }
-  }
-  .align-with-adjacent-h1 {
-    position: relative;
-    top: 0.24em;
-  }
-}
+
 /********************************************
   GRID Utility Classes
 ********************************************/
@@ -122,33 +95,8 @@ Utility Classes
 
 /*******************************************/
 @media screen and (min-width: 52em) {
-  .halfs-with-double-height-col-2 {
-    .col-1-to-6.row-2 {
-      grid-column: 7 / span 6;
-      grid-row: 1;
-      .section-content {
-        padding-left: 1em;
-      }
-    }
-    .col-7-to-12 {
-      grid-column: 1 / span 12;
-      grid-row: 2;
-    }
-  }
-}
-@media screen and (min-width: 150em) {
-  .halfs-with-double-height-col-2 {
-    .col-1-to-6.row-2 {
-      grid-column: 1 / span 6;
-      grid-row: 2;
-      .section-content {
-        padding-left: 0;
-        padding-right: 1em;
-      }
-    }
-    .col-7-to-12 {
-      grid-column: 7 / span 6;
-      grid-row: 1 / span 2;
-    }
+  .col-7-to-12 {
+    grid-column: 1 / span 12;
+    grid-row: 2;
   }
 }
