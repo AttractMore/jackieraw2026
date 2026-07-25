@@ -50,6 +50,56 @@
   margin: 5em auto auto;
   width: var(--modal-menu-width);
   background-color: var(--orange);
+  /* See https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog */
+  /* Closed state of the dialog   */
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition:
+    opacity var(--transition-time) var(--transition-ease),
+    transform var(--transition-time) var(--transition-ease),
+    overlay var(--transition-time) var(--transition-ease) allow-discrete,
+    display var(--transition-time) var(--transition-ease) allow-discrete;
+
+  /* Open state of the dialog  */
+  &[open] {
+    opacity: 1;
+    padding: 1rem;
+    transform: scaleY(1);
+  }
+
+  /* Before open state  */
+  /* Needs to be after the previous dialog:open rule to take effect,
+    as the specificity is the same */
+  @starting-style {
+    &[open] {
+      opacity: 0;
+      transform: scaleY(0);
+    }
+  }
+
+  /* Transition the :backdrop when the dialog modal is promoted to the top layer */
+  &::backdrop {
+    background-color: hsla(0, 0%, 0%, 0.4);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    transition: opacity var(--transition-time) var(--transition-ease);
+  }
+
+  &[open]::backdrop {
+    opacity: 1;
+  }
+
+  /* This starting-style rule cannot be nested inside the above selector
+because the nesting selector cannot represent pseudo-elements. */
+
+  @starting-style {
+    &[open]::backdrop {
+      opacity: 0;
+    }
+  }
+
   .modal-menu-header {
     display: flex;
     justify-content: space-between;
@@ -60,10 +110,6 @@
       aspect-ratio: 906 / 1280;
       fill: var(--white);
     }
-  }
-  &::backdrop {
-    background-color: hsla(0, 0%, 0%, 0.4);
-    backdrop-filter: blur(2px);
   }
   ul {
     display: flex;
