@@ -4,7 +4,6 @@
     --b2: var(--dark-blue) !important;
     text-align: left !important;
     font-size: 0.7em !important;
-    margin-bottom: 1em;
   }
   #wcb_a {
     font-weight: 400 !important;
@@ -15,12 +14,5 @@
   }
   &.wcb-d #wcb_2 {
     color: var(--white) !important;
-  }
-}
-@media screen and (min-width: 52em) {
-  #wcb {
-    &.carbonbadge {
-      text-align: right !important;
-    }
   }
 }
