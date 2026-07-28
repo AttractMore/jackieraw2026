@@ -4,7 +4,7 @@
 
 const dialog = document.querySelector("dialog");
 
-if (typeof dialog.showModal === "function") {
+if (typeof dialog.showModal !== "function") {
   // Load polyfill script
   const polyfill = document.createElement("script");
   polyfill.type = "text/javascript";
