@@ -1,10 +1,20 @@
 {{- define "main" }}
 <div class="home" itemscope itemtype="https://schema.org/BlogPosting">
   <section class="wrap">
-    <div class="content"> {{ .Content }} </div>
-    <p class="standard-button">
-      <a href="/">Contact</a>
-    </p>
+    <h1>{{ .Title }}</h1>
+    <div class="grid-col-12">
+      <div class="content">
+        {{ .Content }}
+        <p class="standard-button">
+          <a href="/">Contact</a>
+        </p>
+      </div>
+      <aside>
+        <figure>
+          <img src="/images/jackie-raw.jpg" width="900" height="780" alt="Jackie Raw" loading="eager" decoding="async" />
+        </figure>
+      </aside>
+    </div>
   </section>
 </div>
 {{- end }}{{/* end main */}}
