@@ -2,8 +2,6 @@
 title: "Homeopathy"
 ---
 
-# Homeopathy
-
 Homeopathy is a gentle, non-invasive form of medicine using highly-diluted substances to stimulate the body's natural healing abilities. In individualised Homeopathy, the Homeopath will match all of the patients' symptoms (mental, physical and emotional), to a single, or small number, of homeopathic remedies.
 
 Due to the highly-diluted nature of homeopathic remedies, they are considered safe, non-toxic and unlikely to cause side-effects. However, as with any type of healthcare intervention, it is always recommended to consult a qualified Homeopath and advise your primary care provider in order to achieve the best level of health management and medical care.

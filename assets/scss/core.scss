@@ -32,11 +32,6 @@ LAYOUT & GRID STYLES
 .main {
   padding-top: 2em;
 }
-// @media screen and (min-width: 52em) {
-//   .main {
-//     padding-top: 7em;
-//   }
-// }
 .wrap {
   width: var(--max-content-percentage);
   margin: 0 auto;
@@ -72,7 +67,6 @@ hr {
   margin: 0;
 }
 img {
-  display: block;
-  margin: 0.5em auto;
+  margin: 0 auto;
   max-width: 450px;
 }

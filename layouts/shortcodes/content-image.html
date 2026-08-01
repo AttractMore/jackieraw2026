@@ -1,0 +1,93 @@
+{{/*
+  @description - Shortcode for images from HUGO 
+  Named parameters are all strings
+  - class
+  - id
+  - style - additional css
+  - link (if you need to make the figure a link)
+  - src  - the name of the image
+  - alt - alt text
+  - width
+  - height
+  - loading
+  - caption (any Markdown in the caption will be processed correctly )
+  @returns - figure with img and, optionally, figcaption
+*/}}
+
+<figure 
+  {{ $class:= .Get "class" }}
+  {{ if $class }} 
+    class="{{ $class }}"
+  {{ end }}
+  {{ with .Get "id" }} id="{{ . }}"{{ end }}
+  {{ with .Get "style" }} style="{{ . | safeCSS }}"{{- end -}}>
+  {{- if .Get "link" -}}
+      <a href="{{ .Get "link" }}">
+  {{- end -}}
+  <img decoding="async"
+  {{- with .Get "src" }}  src="{{ . }}" {{ end -}}
+  {{- with .Get "alt" }} alt="{{ . }}"{{ end -}}
+  {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+  {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+  {{- with .Get "loading" }} loading="{{ . }}" {{ end -}}
+
+  srcset="
+  {{ $src:= .Get "src" }}
+  {{ if $src }}
+    {{ $original := resources.Get $src }}
+    {{ $originalWidth := $original.Width }}
+
+    {{ if gt $originalWidth "700" }}
+      {{ $image700 := $original.Resize "700x" }}
+      {{ $image700.RelPermalink }} 700w,  
+    {{- end -}}
+
+    {{ if gt $originalWidth "600" }}
+      {{ $image600 := $original.Resize "600x" }}
+      {{ $image600.RelPermalink }} 600w, 
+    {{- end -}}
+
+    {{ if gt $originalWidth "500" }}
+      {{ $image500 := $original.Resize "500x" }}
+      {{ $image500.RelPermalink }} 500w, 
+    {{- end -}}
+
+    {{ if gt $originalWidth "400" }}
+      {{ $image400 := $original.Resize "400x" }}
+      {{ $image400.RelPermalink }} 400w, 
+    {{- end -}}
+
+    {{ $original.RelPermalink }} {{ $original.Width }}w
+  {{- end -}}
+
+  "
+  {{ if $class }}
+
+    {{ if or (strings.Contains $class "alignright") (strings.Contains $class "alignleft") }}
+
+      {{ if strings.Contains $class "align45" }}
+        sizes="((max-width: 767px), 92vw, ((min-width: 768px) and (max-width: 1305px)) 41.4vw, (min-width: 1306px) 540px)"
+      {{- else if strings.Contains $class "align35" }}
+        sizes="((max-width: 767px), 92vw, ((min-width: 768px) and (max-width: 1305px)) 32.2vw, (min-width: 1306px) 420px)"
+      {{- else -}}
+        sizes="100vw"
+      {{- end -}}
+
+    {{- else -}}
+      sizes="100vw"
+    {{- end -}}
+
+  {{- else -}}
+    sizes="100vw"
+  {{- end -}}
+  /><!-- Closing img tag -->
+
+  {{- if .Get "link" }}</a>{{ end -}}
+
+  {{- if .Get "caption" -}}
+    <figcaption>
+      {{- .Get "caption" | markdownify }}
+    </figcaption>
+  {{ end }}
+</figure>
+

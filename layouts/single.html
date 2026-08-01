@@ -1,9 +1,20 @@
 {{- define "main" }}
-<section>
-  <div class="wrap">
-    <article>
-      <div class="content"> {{ .Content }} </div>
+<div itemscope itemtype="https://schema.org/BlogPosting">
+  <section class="wrap">
+    <h1>{{ .Title }}</h1>
+    <article class="grid-col-12">
+      <div class="content">
+        {{ .Content }}
+        <p class="standard-button">
+          <a href="/">Contact</a>
+        </p>
+      </div>
+      <aside>
+        <figure>
+          <img src="/images/jackie-raw.jpg" width="900" height="780" alt="Jackie Raw" loading="eager" decoding="async" />
+        </figure>
+      </aside>
     </article>
-  </div>
-</section>
+  </section>
+</div>
 {{- end }}{{/* end main */}}

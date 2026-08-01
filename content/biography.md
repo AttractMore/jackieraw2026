@@ -2,8 +2,6 @@
 title: Biography
 ---
 
-# Biography
-
 Jackie Raw is a Homeopath in general practice, with special interest in rheumatology & gastroenterology.
 
 She qualified from London College of Classical Homeopathy in 2002 and subsequently completed post-graduate study in Rheumatology : Disease Processes, Treatment & Care from the University of Leeds in 2011.
